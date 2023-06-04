@@ -13,9 +13,9 @@ import { StlRenderer } from "./test_scene";
 })
 export class View3DComponent implements  AfterViewInit {
   @ViewChild("3dDraw", { static: true })
-  drawElement: ElementRef<HTMLCanvasElement>;
+  drawElement!: ElementRef<HTMLCanvasElement>;
   @ViewChild("3dDraw1", { static: true })
-  drawElement1: ElementRef<HTMLCanvasElement>;
+  drawElement1!: ElementRef<HTMLCanvasElement>;
   stlRenderer:StlRenderer
 
 

@@ -1,11 +1,12 @@
 {
   "name": "@solenopsys/ui-3d",
-  "version": "0.0.1",
-  "dependencies": {
-    "three": "^0.147.0"
-  },
+  "version": "0.1.0",
   "scripts": {
-    "test": "node index.js",
-    "build": "etsc -p tsconfig.lib.json"
+    "build": "ng-packagr -p ng-package.json -c ../../../../tsconfig.base.json"
+  },
+  "peerDependencies": {
+    "@types/three": "^0.152.1",
+    "@solenopsys/ui-utils": "^0.1.0",
+    "three": "^0.152.1"
   }
 }
