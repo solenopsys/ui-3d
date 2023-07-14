@@ -29,6 +29,7 @@ export class View3DComponent implements  AfterViewInit {
    animate() {
     requestAnimationFrame( this.animate );
      this.stlRenderer.render();
+
   }
 
 
@@ -38,6 +39,7 @@ export class View3DComponent implements  AfterViewInit {
     this.drawElement.nativeElement.appendChild(this.stlRenderer.renderer.domElement);
  // stlRenderer.loadStl("/assets/3d/usb.STL");
    this.stlRenderer.load3MF("/assets/3d/USB3.3MF");
+
     this.animate()
   }
 
