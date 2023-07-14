@@ -5,8 +5,8 @@
     "build": "ng-packagr -p ng-package.json -c ../../../../tsconfig.packages.json"
   },
   "peerDependencies": {
-    "@types/three": "^0.152.1",
+    "@types/three": "^0.153.0",
     "@solenopsys/ui-utils": "^0.1.0",
-    "three": "^0.152.1"
+    "three": "^0.153.0"
   }
 }
