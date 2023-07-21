@@ -2,7 +2,7 @@
   "name": "@solenopsys/ui-3d",
   "version": "0.1.0",
   "scripts": {
-    "build": "ng-packagr -p ng-package.json -c ../../../../tsconfig.packages.json"
+    "build": "xs-pack"
   },
   "peerDependencies": {
     "@types/three": "^0.153.0",
