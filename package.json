@@ -6,6 +6,9 @@
 "type": "module",
 "dependencies": {},
 "peerDependencies": {
+  "@solenopsys/converged-reactive": "latest",
+  "@solenopsys/converged-renderer": "latest",
+  "@solenopsys/converged-style": "latest",
   "@types/three": "^0.164.1",
   "three": "^0.164.1"
 },
