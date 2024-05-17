@@ -17,6 +17,6 @@
   "bun-types": "latest"
 },
 "external": [
-  "tree"
+
 ]
 }

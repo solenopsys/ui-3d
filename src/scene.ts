@@ -1,6 +1,5 @@
 import * as THREE from "three";
-import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
-import {RGBELoader} from "three/examples/jsm/loaders/RGBELoader";
+import { OrbitControls,RGBELoader } from "./helpers";
 
 const light1 = new THREE.SpotLight(0xffffff, 1);
 light1.position.set(-600, 1200, 1200);
@@ -15,8 +14,7 @@ export class BasicSceneConfig {
     public readonly scene: THREE.Scene;
     private camera: THREE.Camera;
     public renderer: THREE.WebGLRenderer;
-    private envMap: any;
-
+    
     constructor() {
         this.camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
         this.camera.position.z = 70;

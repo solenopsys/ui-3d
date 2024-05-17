@@ -1,6 +1,6 @@
-import {STLLoader} from "three/examples/jsm/loaders/STLLoader";
-import {ThreeMFLoader} from "three/examples/jsm/loaders/3MFLoader";
+
 import {CubeTextureLoader} from "three";
+import { STLLoader,ThreeMFLoader } from "./helpers";
 
 import * as THREE from "three";
 
