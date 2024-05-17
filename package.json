@@ -1,12 +1,19 @@
 {
   "name": "@solenopsys/ui-3d",
   "version": "0.1.0",
-  "scripts": {
-    "build": "ng-packagr -p xs-package.json -c ../../../configurations/typescript/libraries.json"
-  },
-  "peerDependencies": {
-    "@types/three": "^0.153.0",
-    "@solenopsys/ui-utils": "^0.1.0",
-    "three": "^0.153.0"
-  }
+
+"module": "index.tsx",
+"type": "module",
+"dependencies": {},
+"peerDependencies": {
+  "@types/three": "^0.164.1",
+  "three": "^0.164.1"
+},
+"devDependencies": {
+  "@types/bun": "^1.0.0",
+  "bun-types": "latest"
+},
+"external": [
+  "tree"
+]
 }
