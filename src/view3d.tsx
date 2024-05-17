@@ -1,4 +1,5 @@
-import { Component } from "@solenopsys/converged-renderer";
+import { Component,useEffect } from "@solenopsys/converged-renderer";
+import $ from "@solenopsys/converged-reactive";
 import { BasicSceneConfig } from "./scene";
 import { load3MF } from "./loaders";
 
@@ -7,7 +8,7 @@ export const View3D: Component = (props: {
 	textureUrl: string;
 }) => {
 	console.log("VIEV3D PROPS", props);
-	let containerRef;
+	const ref = $<HTMLDivElement>();
 	let config = new BasicSceneConfig();
 	config.loadTexture(props.textureUrl);
 
@@ -16,15 +17,19 @@ export const View3D: Component = (props: {
 		config.render();
 	};
 
-	if (containerRef) {
-		containerRef.appendChild(config.renderer.domElement);
-	}
-
 	load3MF(props.modelUrl, config.scene);
 
-	return (
-		<div style={{ maxWidth: "1000px" }} ref={(el) => (containerRef = el)}></div>
-	);
+	useEffect(() => {
+    console.log("EFFECT");
+		const node = ref();
+		if (!node) return;
+		console.log("REF OK");
+		node.appendChild(config.renderer.domElement);
+    animate();
+	});
+
+	return (<div style={{ maxWidth: "1000px" }} ref={ref}></div>);
+	;
 };
 
 export default View3D;
